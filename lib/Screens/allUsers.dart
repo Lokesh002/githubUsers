@@ -336,7 +336,7 @@ class _AllUsersState extends State<AllUsers> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: screenSize.screenWidth * 80,
+                        width: screenSize.screenWidth * 90,
                         child: TextFormField(
                           minLines: 1,
 
@@ -360,43 +360,38 @@ class _AllUsersState extends State<AllUsers> {
 
                           decoration: InputDecoration(
                             hintText: "Search",
+                            icon: Icon(
+                              Icons.search,
+                              color: Theme.of(context).primaryColor,
+                            ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(
                                     screenSize.screenHeight * 2)),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding:
-                            EdgeInsets.only(left: screenSize.screenWidth * 3),
-                        child: GestureDetector(
-                          onTap: () async {
-                            if (_formKey.currentState.validate()) {
-                              setState(() {
-                                isReady = false;
-                              });
-                            }
-                          },
-                          child: Material(
-                            elevation: 5,
-                            borderRadius: BorderRadius.circular(
-                              screenSize.screenHeight * 2.8,
-                            ),
-                            child: CircleAvatar(
-                              backgroundColor: Theme.of(context).primaryColor,
-                              radius: screenSize.screenHeight * 3,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: screenSize.screenHeight * 2.8,
-                                child: Icon(
-                                  Icons.search,
-                                  color: Theme.of(context).primaryColor,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
+//                      Padding(
+//                        padding:
+//                            EdgeInsets.only(left: screenSize.screenWidth * 3),
+//                        child: Material(
+//                          elevation: 5,
+//                          borderRadius: BorderRadius.circular(
+//                            screenSize.screenHeight * 2.8,
+//                          ),
+//                          child: CircleAvatar(
+//                            backgroundColor: Theme.of(context).primaryColor,
+//                            radius: screenSize.screenHeight * 3,
+//                            child: CircleAvatar(
+//                              backgroundColor: Colors.white,
+//                              radius: screenSize.screenHeight * 2.8,
+//                              child: Icon(
+//                                Icons.search,
+//                                color: Theme.of(context).primaryColor,
+//                              ),
+//                            ),
+//                          ),
+//                        ),
+//                      )
                     ],
                   ),
                 ),
